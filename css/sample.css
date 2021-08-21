@@ -1,0 +1,37 @@
+/* 背景 */
+body{
+    background-color: gray;
+}
+/* 幅 */
+.frame1{
+    width: 200px;
+    height: 100px;
+    background-color: white;
+}
+.frame2{
+    width: 50%;
+    background-color: white;
+}
+/* 余白 */
+.frame3{
+    margin: 100px;
+    padding: 20px;
+    background-color: #00008b;
+    color: white;
+}
+/* 境界線 */
+.border{
+    border: 1px #ff0000 solid;
+    background-color: white;
+}
+/* displayの違い */
+.block-frame{
+    display: block;
+    margin-top: 10px;
+    background-color: white;
+}
+.inline-block-frame{
+    display: inline-block;
+    margin-top: 10px;
+    background-color: white;
+}

@@ -1,0 +1,27 @@
+.blue-dot-border{
+    border-bottom-style: dotted;
+    border-bottom-color: blue;
+}
+.center1{
+    text-align: center;
+}
+.center2{
+    font-weight: bold;
+    /* text-align: center; */
+}
+.flex1{
+    /* display:flex　flexを指定してやる→justify-contentが使えるようになる。*/
+    display: flex;
+    justify-content: flex-end;
+}
+.flex2{
+    background-color: red;
+    width: 100px;
+    /* margin:0 auto; */
+}
+
+/* 親要素に中央揃え、右寄せとか書く */
+/* 子がインライン要素の時はtext-align */
+/* 子がブロック要素の時はflex */
+
+/* 親にflexせずに子要素にmargin　でも行ける */
