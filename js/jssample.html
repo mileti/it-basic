@@ -20,6 +20,66 @@
         console.log(border);
 
 
+        //配列
+        const array = [1,5,8,10]
+        console.log('(2)配列について');
+        //Javascriptの配列は0番目から
+        console.log(array[2]);
+        console.log(border);
+        
+        //while文
+        let i = 0;
+        console.log('(3) while文');
+        while(i<5){
+            console.log('while文の中身 : ' + (i+1) + '回目');
+            // インクリメント
+            i++;
+        }
+        console.log(border);
+
+        // for文
+        console.log('(4) for文でarrayの中身を表示');
+        for(let j = 0; j < array.length; j++){
+            console.log(array[j]);
+        }
+        console.log(border);
+
+        // if文
+        console.log('(5) ageが20以上だったら「成人済み」と表示。違うなら「未成年」と表示');
+        const age = 19;
+        console.log('age =' + age);
+        if(age >= 20){
+            console.log('成人済み');
+        }else if (age >= 16){
+            console.log('高校生');
+        }else{
+            console.log('未成年');
+        }
+
+        console.log(border);
+        // エクササイズ
+        //変数arrayに1,2,3,4,5,6,7,8,9,10を順番に入れた配列を作成し、「5」をコンソールに表示させてください。
+        const array2 = [1,2,3,4,5,6,7,8,9,10];
+        console.log(array2[4]);
+        console.log(border); 
+        
+        //　arrayの中の値を全て足し合わせて、コンソールに表示させてください。
+        let ans = 0;
+        for(let k = 0; k < array2.length; k++){
+            ans = ans + array2[k];
+
+        }
+        console.log('合計 = ' + ans);
+
+        //　arrayの中で偶数のみ足し合わせて、コンソールに表示させてください。
+        console.log(border);          
+        let ans2 = 0;
+        for(let l = 0; l < array2.length; l++){
+            if(array2[l]%2 == 0 ){
+                ans2 = ans2 + array2[l];
+            }
+        }
+        console.log('合計 = ' + ans2);
     </script>
 
 
@@ -27,6 +87,6 @@
 
 </head>
 <body>
-    
+    <h1>結果はコンソール画面で確認</h1>
 </body>
 </html>
