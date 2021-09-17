@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM sample1</title>
+
+    <script>
+        function getTextById(){
+            const recipeName = document.getElementById('recipe').innerText;
+            console.log(recipeName);
+        }
+        function getTextByClass(){
+            const vegetables = document.getElementsByClassName('vegetable');
+            for(var i = 0; i < vegetables.length; i++){
+                console.log(vegetables[i].innerText);
+            }
+        }
+
+
+
+
+    </script>
+
+
+
+</head>
+<body>
+    <h3>ノードを指定する</h3>
+    <br>
+    <h3 id = 'recipe'>カレー</h3>
+   カレーの
+   材料について
+    <ul>
+        <li class="vegetable">玉ねぎ</li>
+        <li class="vegetable">にんじん</li>
+        <li class="vegetable">じゃがいも</li>
+        <li id="meat">お肉</li>
+        <li>ルー</li>
+    </ul>
+    <a href="https://ja.wikipedia.org/wiki/カレー">カレーのWiki</a><br>
+<button onclick="getTextById()">「recipe」id要素のテキスト</button><br>
+<button onclick="getTextByClass()">「vegetable」クラスのテキスト</button><br>
+<button onclick="getTextByTag('li')">「li」タグのテキスト</button><br>
+<button onclick="getTextByTag('ul')">「ul」タグのテキスト</button><br>
+<button onclick="getHtmlByTag('ul')">「ul」タグのHTML</button><br>
+<button onclick="getTextContentByTag('ul')">「ul」タグのtextContent</button><br>
+
+</body>
+</html>

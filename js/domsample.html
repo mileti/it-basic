@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function sayAnswer(){
+            const answer = document.getElementById('answer').innerText;
+            alert('今日の夜ごはんは' + answer + 'です');
+        }
+    </script>
+</head>
+<body>
+    <h2>Q.今日の夜ごはんは何ですか？</h2>
+    <h3>A. <span id="answer">カップヌードル「シーリー」、サラダ、チキン南蛮</span></h3>
+    <button onclick="sayAnswer()">回答</button>
+
+</body>
+</html>
