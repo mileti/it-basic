@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM sample2</title>
+    <script>
+
+        function getParentElement(){
+            const currentNode = document.getElementById('meat');
+            const result = currentNode.parentElement;
+            console.log(result);
+        }
+        function getPreviousElementSlibling(){
+            const currentNode = document.getElementById('meat');
+            const result = currentNode.previousElementSibling;
+            console.log(result);
+        }
+        function getNextElementSlibling(){
+            const currentNode = document.getElementById('meat');
+            const result = currentNode.nextElementSibling;
+            console.log(result);
+        }
+
+        function getChildren(){
+            const ulElements = document.getElementsByTagName('ul')[0];
+            const resultArray = ulElements.children;
+            for(let i = 0; i < resultArray.length; i++){
+                console.log(resultArray[i]);
+            }
+        }
+        function getFirstElementChild(){
+            const currentNode = document.getElementsByTagName('ul')[0];
+            const result = currentNode.firstElementChild;
+            console.log(result);
+        }
+        function getLastElementChild(){
+            const currentNode = document.getElementsByTagName('ul')[0];
+            const result = currentNode.lastElementChild;
+            console.log(result);
+        }
+
+        function getNode(){
+            const currentNode = document.getElementById('recipe');
+            const result = currentNode.nextSibling;
+            console.log(result);
+        }
+        function getElement(){
+            const currentNode = document.getElementById('recipe');
+            const result = currentNode.nextElementSibling;
+            console.log(result);
+        }
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+</head>
+<body>
+    <h3>相対的にノードを指定する</h3>
+    <br>
+    <h3 id = 'recipe'>カレー</h3>
+    カレーの
+    材料について
+    <ul>
+        <li class="vegetable">玉ねぎ</li>
+        <li class="vegetable">にんじん</li>
+        <li class="vegetable">じゃがいも</li>
+        <li id="meat">お肉</li>
+        <li>ルー</li>
+    </ul>
+    <a href="https://ja.wikipedia.org/wiki/カレー" target="_brank" rel="noopener noreferrer">カレーのWiki</a><br>
+<button onclick="getParentElement()">お肉から親要素</button><br>
+<button onclick="getPreviousElementSlibling()">お肉から前（兄）要素</button><br>
+<button onclick="getNextElementSlibling()">お肉から後（弟）要素</button><br>
+<button onclick="getChildren()">「ul」の子要素全て</button><br>
+<button onclick="getFirstElementChild()">「ul」の子要素の中で一番最初</button><br>
+<button onclick="getLastElementChild()">「ul」の子要素の中で一番最後</button><br>
+<button onclick="getNode()">カレー（id=recipe）のnextSibling</button><br>
+<button onclick="getElement()">カレー（id=recipe）のnextElementSibling</button><br>
+
+</body>
+</html>

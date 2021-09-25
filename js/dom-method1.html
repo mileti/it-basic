@@ -13,8 +13,26 @@
         }
         function getTextByClass(){
             const vegetables = document.getElementsByClassName('vegetable');
-            for(var i = 0; i < vegetables.length; i++){
+            for(let i = 0; i < vegetables.length; i++){
                 console.log(vegetables[i].innerText);
+            }
+        }
+        function getTextByTag(tag){
+            const liElements = document.getElementsByTagName(tag);
+            for(let i = 0; i < liElements.length; i++){
+                console.log(liElements[i].innerText);
+            }
+        }
+        function getHtmlByTag(tag){
+            const ulElements = document.getElementsByTagName(tag);
+            for(let i = 0; i < ulElements.length; i++){
+                console.log(ulElements[i].innerHTML);
+            }
+        }
+        function getTextContentByTag(tag){
+            const ulElements = document.getElementsByTagName(tag);
+            for(let i = 0; i < ulElements.length; i++){
+                console.log(ulElements[i].textContent);
             }
         }
 
