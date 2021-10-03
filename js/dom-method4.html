@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM sample4</title>
+
+    <script>
+        function createNode(){
+            //追加するノードの作成
+            const newElement = document.createElement('li');
+            newElement.innerText = 'しょうゆ'
+            // const text = document.createTextNode('しょうゆ');
+            // newElement.appendChild(text);
+            // 追加
+            const ulElements = document.getElementsByTagName('ul')[0];
+            ulElements.appendChild(newElement);
+            // ulElement.after(newElement);
+            // ulElement.before(newElement);
+        }
+        function deleteNode(){
+            const targetElement = document.getElementById('meat').nextElementSibling;
+            targetElement.remove();
+        // 子要素のノードを削除する場合 removeChild
+        // const parentElement = document.getElementsByTagName('ul')[0];
+        // parentElement.removeChild(document.getElementById('meat').nextElementSibling);   
+        }
+        function replace(){
+            const newElement1 = document.createElement('h3');
+            newElement1.innerText = '肉じゃが'
+
+            const newExpain = document.createTextNode('肉じゃがの材料について');
+
+            const newElement2 = document.createElement('a');
+            newElement2.innerText = '肉じゃがのwiki'
+            newElement2.setAttribute('href', 'https://ja.wikipedia.org/wiki/肉じゃが');
+            newElement2.setAttribute('target', '_brank');
+            newElement2.setAttribute('rel', 'noopener noreferrer');//呪文
+
+            const explainNode = document.getElementById('recipe').nextSibling;
+            explainNode.replaceWith(newExpain);
+
+            const recipeNode = document.getElementById('recipe');
+            recipeNode.replaceWith(newElement1);
+
+            const aNode = document.getElementsByTagName('a')[0];
+            aNode.replaceWith(newElement2);
+
+        }
+
+
+    </script>
+
+
+
+</head>
+ <body>
+     <h3>ノードの追加・削除</h3>
+     <br>
+     <h3 id = 'recipe'>カレー</h3>
+     カレーの
+     材料について
+     <ul>
+         <li class="vegetable">玉ねぎ</li>
+         <li class="vegetable">にんじん</li>
+         <li class="vegetable">じゃがいも</li>
+         <li id="meat">お肉</li>
+         <li>ルー</li>
+     </ul>
+     <a href="https://ja.wikipedia.org/wiki/カレー" target="_brank" rel="noopener noreferrer">カレーのWiki</a><br>
+ <button onclick="createNode()">ノードの追加</button><br>
+ <button onclick="deleteNode()">ノードの削除</button><br>
+ <button onclick="replace()">ノードの置換</button><br>
+ </body>
+</html>

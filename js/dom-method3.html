@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM sample3</title>
+
+    <script>
+        function getLink1(){
+            const linkName = document.getElementsByTagName('a')[0].href;//要素ノード,プロパティ名(=href)
+            console.log(linkName);
+        }
+        function setLink1(){
+            document.getElementsByTagName('a')[0].href = 'https://ja.wikipedia.org/wiki/肉じゃが';
+        }
+        function getLink2(){
+            const linkName = document.getElementsByTagName('a')[0].getAttribute('href');
+            console.log(linkName);
+        }
+        function setLink2(){
+            document.getElementsByTagName('a')[0].setAttribute('href', 'https://ja.wikipedia.org/wiki/カレー');
+        }
+    </script>
+
+
+
+
+
+</head>
+<body>
+    <h3>属性値の取得・設定</h3>
+    <br>
+    <h3 id = 'recipe'>カレー</h3>
+    カレーの
+    材料について
+    <ul>
+        <li class="vegetable">玉ねぎ</li>
+        <li class="vegetable">にんじん</li>
+        <li class="vegetable">じゃがいも</li>
+        <li id="meat">お肉</li>
+        <li>ルー</li>
+    </ul>
+    <a href="https://ja.wikipedia.org/wiki/カレー" target="_brank" rel="noopener noreferrer">カレーのWiki</a><br>
+<button onclick="getLink1()">要素ノード.プロパティ名で値を取得</button><br>
+<button onclick="setLink1()">要素ノード.プロパティ名で値を変更</button><br>
+<button onclick="getLink2()">getAttributeで値を取得</button><br>
+<button onclick="setLink2()">setAtrributeで値を変更</button><br>
+</body>
+</html>
