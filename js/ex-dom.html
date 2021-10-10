@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+ <html lang="ja">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="ex-dom.css">
+     <script>
+         function btn1() {
+             const currentNode = document.getElementById('morning-list').className = 'blue-text';
+            //console.log(currentNode);
+             // ここを編集
+         }
+         function btn2() {
+             const afternoonNode = document.getElementById('afternoon-list');
+             const resultArray = afternoonNode.children;
+            //  for (let i = 0; i < resultArray.length; i++){
+            //      console.log(resultArray[i]);
+            //  }
+            resultArray[1].className = 'red-text';
+            resultArray[2].className = 'red-text';
+            resultArray[8].className = 'red-text';
+            //  console.log(resultArray[0]);
+             // ここを編集
+         }
+        //  function btn2() {
+        //      // 赤文字に変更する単元の順番を保持
+        //      const order = [ 1, 2, 8];
+        //      const liElements = document.getElementById('afternoon-list').children;
+        //      for(let i = 0 ; i < order.length; i++ ){
+        //          liElements[order[i]].setAttribute('class', 'red-text');
+        //      }
+        //  }
+         function btn3() {
+             const Title = document.getElementById('title');
+             const newElement1 = document.createElement('a');
+             newElement1.innerText = '公式サイト';
+             newElement1.setAttribute('href', 'https://www.jitec.ipa.go.jp/');
+             newElement1.setAttribute('target', '_brank');
+             newElement1.setAttribute('rel', 'noopener noreferrer');
+             Title.after(newElement1);//くっつける先.後に（これ）
+             // ここを編集
+         }
+     </script>
+     <title>DOM操作の演習</title>
+ </head>
+ <body>
+     <h3 id="title">基本情報の試験範囲</h3>
+     <h4>午前</h4>
+     <ul id="morning-list">
+         <li>テクノロジ系</li>
+         <li>マネジメント系</li>
+         <li>ストラテジ系</li>
+     </ul>
+     <h4>午後</h4>
+     <ul id="afternoon-list">
+         <li>セキュリティ</li>
+         <li>ソフトウェア・ハードウェア</li>
+         <li>データベース</li>
+         <li>ネットワーク</li>
+         <li>ソフトウェア設計</li>
+         <li>プロジェクトマネジメント</li>
+         <li>サービスマネジメント</li>
+         <li>システム戦略</li>
+         <li>経営戦略・企業と法務</li>
+         <li>データ構造及びアルゴリズム</li>
+         <li>ソフトウェア開発</li>
+     </ul>
+ 
+     <button onclick="btn1()">ボタン1</button>
+     <button onclick="btn2()">ボタン2</button>
+     <button onclick="btn3()">ボタン3</button>
+     
+ </body>
+ </html>
