@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inputのtype属性</title>
+</head>
+<body>
+   <h3>入力をためしてみてね</h3>
+   <form action="input-message.html" method="post"> 
+       <!-- get通信、post通信 -->
+       <label>テキストボックス</label>
+       <input type="text" name="text" value="初期値"><br>
+       <label>パスワード入力</label>
+       <input type="password" name="password"><br>
+       <br>
+       <label>チェックボタン</label><br>
+       チェック項目1 <input type="checkbox" name="checkbox1">
+       チェック項目2 <input type="checkbox" name="checkbox2"><br>
+       <br>
+       <label>ラジオボタン</label>
+       はい <input type="radio" name="radio">
+       いいえ <input type="radio" name="radio"><br>
+       <!-- radio -->
+       <!-- [! 同じ name] の値を持つ複数の選択肢から一つの値を選択することができる。 -->
+       <br>
+       <label>メール入力</label>
+       <input type="email" name="email"><br>
+       <label>日付の入力</label>
+       <input type="date" name="date"><br>
+       <label>数値の入力</label>
+       <input type="number" name="number"><br>
+       <label>隠し要素</label>
+       <input type="hidden" name="hidden"><br>
+       <label>reset</label>
+       <input type="reset" name="reset"><br>
+       <!-- 　formタグに囲まれた入力フォームを初期値に変更する -->
+       <label>submit</label>
+       <input type="submit"><br>
+       <!-- <input type="submit" name="submit" value="確定"><br> -->
+
+
+   </form>
+    
+</body>
+</html>
