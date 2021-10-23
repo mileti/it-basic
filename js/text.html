@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="test.css">
+    <title>test</title>
+    <script>
+        function scoring() {
+        // ここを編集
+        let score_math = 0;
+        // const ans_q1 = document.getElementsByName('q1')[0].value;
+        // if(ans_q1 == 12){
+        //    score_math = score_math + 20; 
+        // }
+        
+        let ans_math = [12, 19, 231, 16, 56];
+
+        for (let i =0; i < 5; i++){
+            const reply_math = document.getElementsByName('q'+(i+1))[0].value;
+            // alert(reply_math);
+            if(reply_math == ans_math[i]){
+                score_math = score_math + 20;
+            }
+            
+        }
+
+        alert(score_math);
+        }
+    </script>
+</head>
+<!-- 12, 19, 231, 16, 56 -->
+<body>
+    <h2>テスト</h2>
+    <form id="test">
+        <h3>数学</h3>
+        <div id="q1">1) 5 + 7 = <input type="number" name="q1"></div>
+        <div id="q2">2) 34 - 15 = <input type="number" name="q2"></div>
+        <div id="q3">3) 11 × 21 = <input type="number" name="q3"></div>
+        <div id="q4">4) 48 ÷ 3 = <input type="number" name="q4"></div>
+        <div id="q5">5) 32 + 8 × 3 = <input type="number" name="q5"></div>
+
+        <h3>国語</h3>
+        <div id="q6">「山月記」を書いたのは誰ですか？</div>
+        <input type="radio" name="q6" value="江戸川乱歩"> 江戸川乱歩
+        <input type="radio" name="q6" value="夏目漱石"> 夏目漱石
+        <input type="radio" name="q6" value="中島敦"> 中島敦
+        <input type="radio" name="q6" value="太宰治"> 太宰治
+        <input type="radio" name="q6" value="芥川龍之介"> 芥川龍之介
+        <br><br>
+        <div id="q7">「羅生門」を書いたのは誰ですか？</div>
+        <input type="radio" name="q7" value="江戸川乱歩"> 江戸川乱歩
+        <input type="radio" name="q7" value="夏目漱石"> 夏目漱石
+        <input type="radio" name="q7" value="中島敦"> 中島敦
+        <input type="radio" name="q7" value="太宰治"> 太宰治
+        <input type="radio" name="q7" value="芥川龍之介"> 芥川龍之介
+        <br><br>
+        <div id="q8">「怪人二十面」を書いたのは誰ですか？</div>
+        <input type="radio" name="q8" value="江戸川乱歩"> 江戸川乱歩
+        <input type="radio" name="q8" value="夏目漱石"> 夏目漱石
+        <input type="radio" name="q8" value="中島敦"> 中島敦
+        <input type="radio" name="q8" value="太宰治"> 太宰治
+        <input type="radio" name="q8" value="芥川龍之介"> 芥川龍之介
+        <br><br>
+        <div id="q9">「走れメロス」を書いたのは誰ですか？</div>
+        <input type="radio" name="q9" value="江戸川乱歩"> 江戸川乱歩
+        <input type="radio" name="q9" value="夏目漱石"> 夏目漱石
+        <input type="radio" name="q9" value="中島敦"> 中島敦
+        <input type="radio" name="q9" value="太宰治"> 太宰治
+        <input type="radio" name="q9" value="芥川龍之介"> 芥川龍之介
+        <br><br>
+        <div id="q10">「こころ」を書いたのは誰ですか？</div>
+        <input type="radio" name="q10" value="江戸川乱歩"> 江戸川乱歩
+        <input type="radio" name="q10" value="夏目漱石"> 夏目漱石
+        <input type="radio" name="q10" value="中島敦"> 中島敦
+        <input type="radio" name="q10" value="太宰治"> 太宰治
+        <input type="radio" name="q10" value="芥川龍之介"> 芥川龍之介
+        <br><br>
+
+        <input type="button" value="採点" onclick="scoring()">
+    </form>
+    <br><br>
+
+    <table border="1" id="result">
+        <tr>
+            <th>数学</th>
+            <th>国語</th>
+        </tr>
+    </table>
+
+</body>
+
+</html>

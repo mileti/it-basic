@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>catalog</title>
+    <script>
+        function add() {
+            // 商品名の取得
+            const goodText = document.getElementById('good').value;
+            // 値段の取得
+            const price = document.getElementById('price').value;
+
+            // ラジオボタンのノード全体を取得
+            const necessity = document.getElementsByName('necessity');
+            let checkedText;
+            for (let i = 0; i < necessity.length; i++) {
+                if(necessity[i].checked) {
+                    checkedText = necessity[i].value;
+                    break;
+                }
+            }
+
+            // 追加分の要素、tableの一行を作成
+            const trElement = document.createElement('tr');
+            const tdElement1 = document.createElement('td');
+            tdElement1.innerText = goodText;
+            const tdElement2 = document.createElement('td');
+            tdElement2.innerText = price;
+            const tdElement3 = document.createElement('td');
+            tdElement3.innerText = checkedText;
+
+            trElement.appendChild(tdElement1);
+            trElement.appendChild(tdElement2);
+            trElement.appendChild(tdElement3);
+
+            // 追加する位置の親のノードを探索
+            const catalog = document.getElementById('catalog');
+            // 画面に追加
+            catalog.appendChild(trElement);
+
+        }
+    </script>
+</head>
+<body>
+    <h3>入力欄</h3>
+    <from>
+        商品名 : <input type="text" name="good" id="good"><br>
+        値段 : <input type="number" name="price" id="price"><br>
+        <input type="radio" name="necessity" value="○"> 必要
+        <input type="radio" name="necessity" value="△"> 保留
+        <input type="radio" name="necessity" value="×"> 不必要 <br>
+        <input type="button" value="追加" onclick="add()">
+    </from>
+    <br>
+    <br>
+
+    <table border="1" id="catalog">
+        <tr>
+            <th>商品名</th>
+            <th>値段</th>
+            <th>必要性</th>
+        </tr>
+    </table>
+</body>
+</html>
