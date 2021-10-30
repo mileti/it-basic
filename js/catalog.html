@@ -11,12 +11,14 @@
             const goodText = document.getElementById('good').value;
             // 値段の取得
             const price = document.getElementById('price').value;
+            //            [~~~~~~~~~~~~~~ノード~~~~~~~~~~~][.～ ：ノードに対する操作] 
 
             // ラジオボタンのノード全体を取得
-            const necessity = document.getElementsByName('necessity');
-            let checkedText;
-            for (let i = 0; i < necessity.length; i++) {
-                if(necessity[i].checked) {
+            const necessity = document.getElementsByName('necessity');//Nameがnecessityのinputタグ３つをノード３つとして取得
+                                                                      // [(ノード)(ノード)(ノード)]配列
+            let checkedText;  //チェックされたボタンの値を入れる箱の初期化
+            for (let i = 0; i < necessity.length; i++) {//
+                if(necessity[i].checked) {  //ノード.checked    チェックされていることを確認→true
                     checkedText = necessity[i].value;
                     break;
                 }
