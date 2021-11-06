@@ -17,21 +17,22 @@
             // }
             
             const ans_math = [12, 19, 231, 16, 56];
-            
+
             for (let i =0; i < 5; i++){
                 const reply_math = document.getElementsByName('q'+(i+1))[0].value;
                 // alert(reply_math);
                 if(reply_math == ans_math[i]){
                     score_math = score_math + 20;
-                }   
+                }else{
+                    document.getElementsByName('q'+(i+1))[0].setAttribute('class', 'border-red'); //間違ったら赤枠をつける
+                }
             }
-            alert(score_math);
-            
-        
+            // alert(score_math);
+
+
             let score_jalang = 0;
-        
             const ans_jalang = ["中島敦", "芥川龍之介", "江戸川乱歩", "太宰治", "夏目漱石"];
-            
+
                 // ラジオボタンのノード全体を取得
             for (let i = 0; i < 5; i++){
                 const reply_jalang = document.getElementsByName('q'+(i+6));
@@ -44,9 +45,25 @@
                 }
                 if(checkedText == ans_jalang[i]){
                     score_jalang = score_jalang + 20;
+                }else{
+                    document.getElementById('q'+(i+6)).setAttribute('class', 'border-red'); //間違ったら赤枠をつける
                 }
             }
-            alert(score_jalang);
+            // alert(score_jalang);
+
+
+            const trElement = document.createElement('tr');//trタグのノードを作る
+            
+            const td1Element = document.createElement('td');//thタグのノードを作る
+            td1Element.innerText = score_math;
+            const td2Element = document.createElement('td');
+            td2Element.innerText = score_jalang;
+
+            trElement.appendChild(td1Element);//親要素に子要素を入れる
+            trElement.appendChild(td2Element);
+
+            const score = document.getElementById('result');
+            score.appendChild(trElement);
         }
         // const reply_jalang = document.getElementsByName('necessity');//Nameがnecessityのinputタグ３つをノード３つとして取得
         //                                                              // [(ノード)(ノード)(ノード)]配列
@@ -57,6 +74,9 @@
         //         break;
         //     }
         // }
+
+
+
     </script>
 </head>
 <!-- 12, 19, 231, 16, 56 -->
