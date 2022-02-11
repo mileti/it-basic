@@ -10,7 +10,7 @@ const connection = mysql.createConnection({
 });
 
 //接続できていないときのエラー
-connection.connect((err) => {
+connection.connect(function(err){
     if(err){
         console.log('error connecting: ' + err.stack);
         return;
@@ -22,15 +22,16 @@ connection.connect((err) => {
 //queryの実行
 connection.query(
     'select * from item',
-    (err, results, filelds) => {
+    function(err, results, filelds){
         console.log('\n 「select * from item」\n');
         console.log(results);
 });
 
 
+
 connection.query(
     'select * from item',
-    (err, results, filelds) => {
+    function(err, results, filelds){
         console.log('\n 「select * from item」の1つ目の要素\n');
         console.log(results[0]);
 });
@@ -38,7 +39,7 @@ connection.query(
 
 connection.query(
     'select * from item',
-    (err, results, filelds) => {
+    function(err, results, filelds){
         console.log('\n 「select * from item」の1つ目の要素のname\n');
         console.log(results[0]['name']);
 });

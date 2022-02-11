@@ -43,5 +43,24 @@ connection.query(
         console.log(results[0]['name']);
 });
 
+//演習
+connection.query(
+    'select * from item',
+    (err, results, filelds) => {
+        console.log('\n 「select * from item」\n');
+        console.log(results);
+
+        let total  = 0;
+
+        for(let i = 0 ; i < results.length ; i++){
+            total = total + results[i]['price'];   
+        }
+
+        console.log('priceの合計= ' + total);
+
+});
+
+
+
 //接続を閉じる
 connection.end();
