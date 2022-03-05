@@ -43,7 +43,7 @@ connection.query(
         console.log(results[0]['name']);
 });
 
-//演習
+//演習1
 connection.query(
     'select * from item',
     (err, results, filelds) => {
@@ -59,6 +59,29 @@ connection.query(
         console.log('priceの合計= ' + total);
 
 });
+
+//演習2
+connection.query(
+    'select * from emp',
+    (err, results, filelds) => {
+        console.log('\n 「select * from emp」\n');
+        console.log(results);
+
+        for(let j = 0 ; j < results.length ; j++){
+
+            
+            if(results[j]['name'].startsWith('山')){
+                console.log(results[j]['name']);
+            }
+
+        }
+
+
+});
+
+
+
+
 
 
 

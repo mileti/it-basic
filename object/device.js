@@ -1,9 +1,19 @@
 //演習
 class Device{
     //コンストラクタ
-    constructor() {}
-    name;
-    energy;
+    constructor(name, energy) {
+        this.name = name;
+        this.energy = energy;
+
+        if (this.name == null){   //デフォルト値
+            this.name = 'デフォルト';
+        }
+        if (this.energy == null){
+            this.energy = 10;
+        }
+    }
+    // name;
+    // energy;
 
     confirm() {
         console.log('名前: '+ this.name + ', 現在のエネルギー: ' + this.energy);
@@ -19,8 +29,6 @@ class Device{
         }
     }
 
-
-
 }
 
 // const device = new Device();
@@ -29,15 +37,26 @@ class Device{
 // device.confirm();
 
 
-const device = new Device();
-device.name = 'デバイス2';
-device.energy = 3;
-device.confirm();
+// device.name = 'デバイス2';
+// device.energy = 3;
+// device.confirm();
+
+// for(let i=1 ; i <= 4 ; i++){
+//     device.move();
+// }
+// let i=0;
+// while(i <=4){
+//     device.move();
+//     i++
+// }
+// device.confirm();
 
 
-for(let i=1 ; i <= 4 ; i++){
-    device.move();
-}
 
 
+//演習4
+const defaultDevice = new Device('でばいす');
+const device = new Device('デバイス4', 7);
+
+defaultDevice.confirm();
 device.confirm();
