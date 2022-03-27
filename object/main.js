@@ -6,10 +6,10 @@ const Cat = require('./cat');
 const mike = new Cat();
 // mike.name = 'ミケ';
 const taro = new Cat('タロウ');
-mike.purr();
-mike.sleep();
-taro.purr();
-taro.sleep();
+// mike.purr();
+// mike.sleep();
+// taro.purr();
+// taro.sleep();
 
 // const sansho = taro;
 // taro.purr();
@@ -18,3 +18,15 @@ taro.sleep();
 // taro.name = 'ジロウ';
 // taro.purr();
 // sansho.purr();
+
+
+
+const RussianBlue = require('./russian-blue');
+
+const blue = new RussianBlue('ブルー');
+// １. overrideしたメソッド
+blue.purr();
+// ２. 親クラス（スーパークラス）のメソッド
+blue.sleep();
+// ２. RussianBlueで新規に追加したメソッド
+blue.scratch();

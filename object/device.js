@@ -55,8 +55,12 @@ class Device{
 
 
 //演習4
-const defaultDevice = new Device('でばいす');
-const device = new Device('デバイス4', 7);
+// const defaultDevice = new Device('でばいす');
+// const device = new Device('デバイス4', 7);
 
-defaultDevice.confirm();
-device.confirm();
+// defaultDevice.confirm();
+// device.confirm();
+
+
+
+module.exports = Device;
