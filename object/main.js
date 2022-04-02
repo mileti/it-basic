@@ -23,10 +23,11 @@ const taro = new Cat('タロウ');
 
 const RussianBlue = require('./russian-blue');
 
-const blue = new RussianBlue('ブルー');
+const blue = new RussianBlue('ブルー',15);
 // １. overrideしたメソッド
 blue.purr();
 // ２. 親クラス（スーパークラス）のメソッド
 blue.sleep();
 // ２. RussianBlueで新規に追加したメソッド
 blue.scratch();
+blue.showStatus();
