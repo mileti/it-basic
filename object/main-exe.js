@@ -6,10 +6,20 @@
 // keyboard.enter();
 // keyboard.confirm();
 
-const MicrowaveOven = require('./microwave-oven');
+
+// const MicrowaveOven = require('./microwave-oven');
  
-const microwaveOven = new MicrowaveOven('panasonic', 5);
-microwaveOven.confirm();
-microwaveOven.move();
-microwaveOven.warm(5);
-microwaveOven.confirm();
+// const microwaveOven = new MicrowaveOven('panasonic', 5);
+// microwaveOven.confirm();
+// microwaveOven.move();
+// microwaveOven.warm(5);
+// microwaveOven.confirm();
+
+
+const Keyboard = require('./keyboard');
+ 
+const keyboard = new Keyboard('logicool', 5, 'JIS配列');
+keyboard.confirm();
+keyboard.showArrangement();
+
+

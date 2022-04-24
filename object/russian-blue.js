@@ -12,13 +12,18 @@ class RussianBlue extends Cat{
 
 
 
-    //override
-    purr(){
-        console.log('親クラスのpurr');
-        super.purr();
-        console.log('以下新しい処理');
+    // //override
+    // purr(){
+    //     console.log('親クラスのpurr');
+    //     super.purr();
+    //     console.log('以下新しい処理');
+    //     console.log(this.name + 'がニャーと鳴く');
+    // }
+    // purrをシンプルに変更
+    purr() {
         console.log(this.name + 'がニャーと鳴く');
     }
+
 
     //新しいメソッド
     scratch(){
